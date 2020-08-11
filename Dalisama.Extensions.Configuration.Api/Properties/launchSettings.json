@@ -1,0 +1,11 @@
+﻿{
+  "Dalisama.Extensions.Configuration.Api": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "launchUrl": "ConfigurationProvider",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development",
+      "ASPNETCORE_URLS": "https://localhost:5003"
+    }
+  }
+}

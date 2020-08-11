@@ -1,0 +1,11 @@
+﻿{
+  "Dalisama.Extensions.Configuration.Consumer": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "launchUrl": "ConfConsumer",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development",
+      "ASPNETCORE_URLS": "https://localhost:5001"
+    }
+  }
+}
