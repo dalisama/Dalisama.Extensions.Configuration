@@ -46,7 +46,7 @@ from you brower, try to access this link: https://localhost:5005/confconsumer an
 You will notice if you refresh the link in the browser, the first element in this array will be changed but the last one will be the same, because actually it's the same object but when it's resolved with IOptionsSnapshot, the framework will fetch the last value, so here you get the flexibility of knowing the first value or the updated one.
 
 ````csharp
- 		[HttpGet]
+[HttpGet]
         public List<ClassOption> Get([FromServices] IOptionsSnapshot<ClassOption> option1, [FromServices] IOptions<ClassOption> option2)
         {
             return new List<ClassOption> { option1.Value, option2.Value};
