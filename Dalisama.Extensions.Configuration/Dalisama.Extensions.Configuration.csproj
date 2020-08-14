@@ -1,8 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <TargetFramework>netstandard2.0</TargetFramework>
+	<id>Dalisama.Extensions.Configuration</id>
+    <version>0.0.2-alpha-08142020</version>
+    <title>Dalisama.Extensions.Configuration</title>
+    <authors>Mohamed Ali Kachbouri (dalisama)</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license>MIT</license>
+    <projectUrl>https://github.com/dalisama/Dalisama.Extensions.Configuration</projectUrl>
+    <icon>https://dalisama.me/wp-content/uploads/2018/09/cropped-eyeglasses1-32x32.png</icon>
+    <description>custom configuration provider for api</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>dalisama 2020</copyright>
+    <tags>dotnetcore, custom configuration provider</tags>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dalisama.Extensions.Configuration.0.0.1-alpha-08142020.nupkg" />
+    <None Remove="Dalisama.Extensions.Configuration.nuspec" />
+    <None Remove="nuget.exe" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.6" />
