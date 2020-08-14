@@ -31,17 +31,21 @@ namespace Dalisama.Extensions.Configuration
 
         public override void Load()
         {
-            Data.Clear();
-            using (var client = Source.ApiOption.HttpClient.Invoke())
+
+            using (var client = Source.ApiOption.HttpClientFactory.Invoke())
             {
                 var result = client.GetAsync(Source.ApiOption.Url).GetAwaiter().GetResult();
                 if (result.IsSuccessStatusCode)
                 {
+                    Data.Clear();
                     var content = result.Content.ReadAsStringAsync().Result;
                     var data = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
                     foreach (var item in data)
                     {
-                        Set(item.Key, item.Value);
+                        Set(
+                            Source.ApiOption.COnfigKeyFormatter(item.Key, item.Value)
+                            , Source.ApiOption.COnfigValueFormatter(item.Key, item.Value)
+                            );
                     }
                 }
             }

@@ -26,7 +26,7 @@ namespace Dalisama.Extensions.Configuration.Consumer
            options.Url = "https://localhost:5001/ConfigurationProvider";
            options.ReloadOnChange = true;
 
-               options.HttpClient = () =>
+               options.HttpClientFactory = () =>
                {
                    var handler = new HttpClientHandler();
                    handler.ServerCertificateCustomValidationCallback = (request, cert, chain, errors) =>
@@ -35,6 +35,8 @@ namespace Dalisama.Extensions.Configuration.Consumer
                     };
                    return new HttpClient(handler);
                };
+               options.COnfigKeyFormatter = (key, value) => key;
+               options.COnfigValueFormatter = (key, value) => value;
 
            }).Build();
         }
