@@ -24,7 +24,7 @@ namespace Dalisama.Extensions.Configuration.Consumer.Controllers
         [HttpGet]
         public List<ClassOption> Get([FromServices] IOptionsSnapshot<ClassOption> option1, [FromServices] IOptionsMonitor<ClassOptionExtend> option2)
         {
-            return new List<ClassOption> { option1.Value, option2.CurrentValue,f};
+            return new List<ClassOption> { option1.Value, option2.CurrentValue};
         }
     }
 }
