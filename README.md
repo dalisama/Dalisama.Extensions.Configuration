@@ -47,10 +47,10 @@ You will notice if you refresh the link in the browser, the first element in thi
 
 ````csharp
 [HttpGet]
-        public List<ClassOption> Get([FromServices] IOptionsSnapshot<ClassOption> option1, [FromServices] IOptions<ClassOption> option2)
-        {
-            return new List<ClassOption> { option1.Value, option2.Value};
-        }
+public List<ClassOption> Get([FromServices] IOptionsSnapshot<ClassOption> option1, [FromServices] IOptions<ClassOption> option2)
+{
+    return new List<ClassOption> { option1.Value, option2.Value};
+}
 ````
 
 
