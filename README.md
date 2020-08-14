@@ -52,5 +52,45 @@ public List<ClassOption> Get([FromServices] IOptionsSnapshot<ClassOption> option
     return new List<ClassOption> { option1.Value, option2.Value};
 }
 ````
+To get this result all you have to do is adding the nuget: Dalisama.Extensions.Configuration and updating your startup.cs:
+
+````csharp
+
+   public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+            Configuration = (IConfiguration)new ConfigurationBuilder().AddApiConfiguration(options =>
+           {
+           options.Url = "https://localhost:5001/ConfigurationProvider";
+           options.ReloadOnChange = true;
+
+               options.HttpClientFactory = () =>
+               {
+                   var handler = new HttpClientHandler();
+                   handler.ServerCertificateCustomValidationCallback = (request, cert, chain, errors) =>
+                    {
+                        return errors == SslPolicyErrors.None;
+                    };
+                   return new HttpClient(handler);
+               };
+               options.COnfigKeyFormatter = (key, value) => key;
+               options.COnfigValueFormatter = (key, value) => value;
+
+           }).Build();
+        }
+
+````
+and here in the ConfigureServices:
+````csharp
+
+         public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
+            services.Configure<ClassOption>(Configuration.GetSection("Section1"));
+
+        }
+
+````
+
 
 
