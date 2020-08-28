@@ -28,8 +28,8 @@ namespace Dalisama.Extensions.Configuration
         public bool ReloadOnChange { get; set; }
         public int ReloadDelay { get; set; } = 500;
         public Func<HttpClient> HttpClientFactory { get; set; }
-        public Func<string, string, string> COnfigKeyFormatter { get; set; } = (key, value) => key;
-        public Func<string, string, string> COnfigValueFormatter { get; set; } = (key, value) => value;
+        public Func<string, string, string> ConfigKeyFormatter { get; set; } = (key, value) => key;
+        public Func<string, string, string> ConfigValueFormatter { get; set; } = (key, value) => value;
     }
 
 

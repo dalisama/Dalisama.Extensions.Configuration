@@ -35,8 +35,8 @@ namespace Dalisama.Extensions.Configuration.Consumer
                     };
                    return new HttpClient(handler);
                };
-               options.COnfigKeyFormatter = (key, value) => key;
-               options.COnfigValueFormatter = (key, value) => value;
+               options.ConfigKeyFormatter = (key, value) => key;
+               options.ConfigValueFormatter = (key, value) => value;
 
            }).Build();
         }

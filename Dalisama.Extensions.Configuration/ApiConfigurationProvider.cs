@@ -43,8 +43,8 @@ namespace Dalisama.Extensions.Configuration
                     foreach (var item in data)
                     {
                         Set(
-                            Source.ApiOption.COnfigKeyFormatter(item.Key, item.Value)
-                            , Source.ApiOption.COnfigValueFormatter(item.Key, item.Value)
+                            Source.ApiOption.ConfigKeyFormatter(item.Key, item.Value)
+                            , Source.ApiOption.ConfigValueFormatter(item.Key, item.Value)
                             );
                     }
                 }
