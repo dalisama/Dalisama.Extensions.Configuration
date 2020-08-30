@@ -3,8 +3,8 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <TargetFramework>netstandard2.0</TargetFramework>
-	<id>Dalisama.Extensions.Configuration</id>
-    <version>0.0.2-alpha-08142020</version>
+    <id>Dalisama.Extensions.Configuration</id>
+    <version>1.0.0</version>
     <title>Dalisama.Extensions.Configuration</title>
     <authors>Mohamed Ali Kachbouri (dalisama)</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -15,12 +15,28 @@
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>dalisama 2020</copyright>
     <tags>dotnetcore, custom configuration provider</tags>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/dalisama/Dalisama.Extensions.Configuration</PackageProjectUrl>
+    <PackageIcon>cropped-eyeglasses1-192x192.png</PackageIcon>
+    <RepositoryUrl>https://github.com/dalisama/Dalisama.Extensions.Configuration</RepositoryUrl>
+    <PackageTags>dotnetcore; custom configuration provider</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Dalisama.Extensions.Configuration.0.0.1-alpha-08142020.nupkg" />
     <None Remove="Dalisama.Extensions.Configuration.nuspec" />
     <None Remove="nuget.exe" />
+    <None Include="cropped-eyeglasses1-192x192.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
